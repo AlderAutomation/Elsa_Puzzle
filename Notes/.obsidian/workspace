@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "_Main.md.md",
+            "file": "Snap to.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_Main.md.md",
+                "file": "Snap to.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "bcdff77aa7d5f461",
   "lastOpenFiles": [
+    "Snap to.md",
     "_Main.md.md",
     "Godot Android.md",
     "Background.md",

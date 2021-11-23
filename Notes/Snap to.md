@@ -1,0 +1,7 @@
+- get pos of mouse
+	- get_viewport().get_mouse_position()
+- get pos of sprite. 
+	- var = get_node("node_name")
+	- pos = get_position(var)
+	- But get_position() get the position of the child compared to the parent. So in our case we have to do this in Main script instead of its own. .... as far as i know so far. 
+- Compare the two pos's if in a given range, snap one to other. 

@@ -5,5 +5,5 @@
 - [x] Main Elsa pic and background
 - [x] elsa pieces 
 -  [x] drag and drop
--  [ ] Snap to elsa
+-  [ ] [[Snap to]] elsa
 -  [ ] victory conditions / fanfare
