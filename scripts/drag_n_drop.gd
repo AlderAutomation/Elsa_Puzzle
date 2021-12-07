@@ -64,3 +64,23 @@ func _on_KinematicBody2D4_input_event(viewport, event, shape_idx):
 	elif event is InputEventScreenTouch:
 		if event.pressed and event.get_index() == 0:
 			self.position = event.get_position()
+
+
+func _on_Piece_Bottom_area_entered(area):
+	if area.is_in_group("bottom"):
+		get_node("../Piece_Bottom/piece3").visible = false
+
+
+func _on_Piece_head_area_entered(area):
+	if area.is_in_group("head"):
+		get_node("../Piece_head/piece1").visible = false
+
+
+func _on_Piece_Torso_area_entered(area):
+	if area.is_in_group("torso"):
+		get_node("../Piece_Torso/piece2").visible = false
+
+
+func _on_Piece_Hand_area_entered(area):
+	if area.is_in_group("hand"):
+		get_node("../Piece_Hand/piece4").visible = false

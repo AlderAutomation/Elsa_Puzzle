@@ -1,25 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Grey_Elsa.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/pics/elsa4.png" type="Texture" id=3]
-[ext_resource path="res://assets/pics/elsa3.png" type="Texture" id=4]
-[ext_resource path="res://assets/pics/elsa2.png" type="Texture" id=5]
-[ext_resource path="res://assets/pics/elsa1.png" type="Texture" id=6]
+[ext_resource path="res://scenes/Pieces.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/main.gd" type="Script" id=7]
-[ext_resource path="res://scripts/drag_n_drop.gd" type="Script" id=8]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 31.9997, 37.7641 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 51.5985, 64.5707 )
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 103, 102.5 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 44.5, 74.5 )
 
 [node name="main" type="Node2D"]
 script = ExtResource( 7 )
@@ -30,64 +14,4 @@ script = ExtResource( 7 )
 position = Vector2( 773, 87 )
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Piece_head" type="Area2D" parent="." groups=["head"]]
-position = Vector2( 171, 79 )
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Piece_head"]
-shape = SubResource( 1 )
-
-[node name="piece1" type="Sprite" parent="Piece_head"]
-scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 6 )
-
-[node name="Piece_Torso" type="Area2D" parent="." groups=["torso"]]
-position = Vector2( 501, 99 )
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Piece_Torso"]
-position = Vector2( -7.09851, -0.570686 )
-shape = SubResource( 3 )
-
-[node name="piece2" type="Sprite" parent="Piece_Torso"]
-scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 5 )
-
-[node name="Piece_Bottom" type="Area2D" parent="." groups=["bottom"]]
-position = Vector2( 179, 341 )
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Piece_Bottom"]
-shape = SubResource( 4 )
-
-[node name="piece3" type="Sprite" parent="Piece_Bottom"]
-scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 4 )
-
-[node name="Piece_Hand" type="Area2D" parent="." groups=["hand"]]
-position = Vector2( 498.985, 385.188 )
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Piece_Hand"]
-shape = SubResource( 2 )
-
-[node name="piece4" type="Sprite" parent="Piece_Hand"]
-scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 3 )
-
-[connection signal="input_event" from="Piece_head" to="Piece_head" method="_on_KinematicBody2D_input_event"]
-[connection signal="input_event" from="Piece_Torso" to="Piece_Torso" method="_on_KinematicBody2D2_input_event"]
-[connection signal="input_event" from="Piece_Bottom" to="Piece_Bottom" method="_on_KinematicBody2D3_input_event"]
-[connection signal="input_event" from="Piece_Hand" to="Piece_Hand" method="_on_KinematicBody2D4_input_event"]
+[node name="Pieces" parent="." instance=ExtResource( 3 )]

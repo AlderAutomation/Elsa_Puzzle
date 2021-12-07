@@ -1,0 +1,10 @@
+- [ ] character selector
+- [x] setup [[Godot Android]] devolopment environment
+- [x] [[Android Settings]] 
+- [x] [[Background]]
+- [x] Main Elsa pic and background
+- [x] elsa pieces 
+-  [x] drag and drop
+-  [ ] [[Snap to]] elsa
+-  [ ] victory conditions / fanfare
+-  [ ] add [[Shader]] instead of drawing seperate elsa images
