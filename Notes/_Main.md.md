@@ -7,3 +7,4 @@
 -  [x] drag and drop
 -  [ ] [[Snap to]] elsa
 -  [ ] victory conditions / fanfare
+-  [ ] add [[Shader]] instead of drawing seperate elsa images
